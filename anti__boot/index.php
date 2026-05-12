@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
     include("anti1.php");
     include("anti2.php");
     include("anti3.php");
